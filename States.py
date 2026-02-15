@@ -1,0 +1,78 @@
+import tkinter
+import tkinter.ttk
+
+root = tkinter.Tk()
+root.title("States by Region")
+
+tree = tkinter.ttk.Treeview(root,columns=("Capital","Abbreviation"))
+tree.heading("Capital",text="Capital")
+tree.heading("Abbreviation",text="Abbreviation")
+
+ne = tree.insert('','end',text="New England")
+ma = tree.insert('','end',text="Mid-Atlantic")
+se = tree.insert('','end',text="Southeast")
+so = tree.insert('','end',text="South")
+mw = tree.insert('','end',text="Midwest")
+wm = tree.insert('','end',text="Mountain West")
+wc = tree.insert('','end',text="West Coast")
+
+tree.insert(ne,'end',text="Maine",values=("Augusta","ME"))
+tree.insert(ne,'end',text="New Hampshire",values=("Concord","NH"))
+tree.insert(ne,'end',text="Vermont",values=("Montpelier","VT"))
+tree.insert(ne,'end',text="Massachusetts",values=("Boston","MA"))
+tree.insert(ne,'end',text="Rhode Island",values=("Providence","RI"))
+tree.insert(ne,'end',text="Connecticut",values=("Hartford","CT"))
+
+tree.insert(ma,'end',text="New York",values=("Albany","NY"))
+tree.insert(ma,'end',text="New Jersey",values=("Trenton","NJ"))
+tree.insert(ma,'end',text="Pennsylvania",values=("Harrisburg","PA"))
+tree.insert(ma,'end',text="Delaware",values=("Dover","DE"))
+
+tree.insert(se,'end',text="Maryland",values=("Annapolis","MD"))
+tree.insert(se,'end',text="West Virginia",values=("Charleston","WV"))
+tree.insert(se,'end',text="Virginia",values=("Richmond","VA"))
+tree.insert(se,'end',text="North Carolina",values=("Raleigh","NC"))
+tree.insert(se,'end',text="South Carolina",values=("Columbia","SC"))
+tree.insert(se,'end',text="Georgia",values=("Atlanta","GA"))
+tree.insert(se,'end',text="Florida",values=("Tallahassee","FL"))
+
+tree.insert(so,'end',text="Kentucky",values=("Frankfort","KY"))
+tree.insert(so,'end',text="Tennessee",values=("Nashville","TN"))
+tree.insert(so,'end',text="Alabama",values=("Montgomery","AL"))
+tree.insert(so,'end',text="Mississippi",values=("Jackson","MS"))
+tree.insert(so,'end',text="Arkansas",values=("Little Rock","AR"))
+tree.insert(so,'end',text="Louisiana",values=("Baton Rouge","LA"))
+tree.insert(so,'end',text="Oklahoma",values=("Oklahoma City","OK"))
+tree.insert(so,'end',text="Texas",values=("Austin","TX"))
+
+tree.insert(mw,'end',text="Ohio",values=("Columbus","OH"))
+tree.insert(mw,'end',text="Indiana",values=("Indianapolis","IN"))
+tree.insert(mw,'end',text="Illinois",values=("Springfield","IL"))
+tree.insert(mw,'end',text="Michigan",values=("Lansing","MI"))
+tree.insert(mw,'end',text="Wisconsin",values=("Madison","WI"))
+tree.insert(mw,'end',text="Minnesota",values=("Saint Paul","MN"))
+tree.insert(mw,'end',text="Iowa",values=("Des Moines","IA"))
+tree.insert(mw,'end',text="Missouri",values=("Jefferson City","MO"))
+tree.insert(mw,'end',text="North Dakota",values=("Bismarck","ND"))
+tree.insert(mw,'end',text="South Dakota",values=("Pierre","SD"))
+tree.insert(mw,'end',text="Nebraska",values=("Lincoln","NE"))
+tree.insert(mw,'end',text="Kansas",values=("Topeka","KS"))
+
+tree.insert(wm,'end',text="Montana",values=("Helena","MT"))
+tree.insert(wm,'end',text="Wyoming",values=("Cheyenne","WY"))
+tree.insert(wm,'end',text="Colorado",values=("Denver","CO"))
+tree.insert(wm,'end',text="New Mexico",values=("Santa Fe","NM"))
+tree.insert(wm,'end',text="Idaho",values=("Boise","ID"))
+tree.insert(wm,'end',text="Utah",values=("Salt Lake City","UT"))
+tree.insert(wm,'end',text="Arizona",values=("Phoenix","AZ"))
+tree.insert(wm,'end',text="Nevada",values=("Carson City","NV"))
+
+tree.insert(wc,'end',text="Washington",values=("Olympia","WA"))
+tree.insert(wc,'end',text="Oregon",values=("Salem","OR"))
+tree.insert(wc,'end',text="California",values=("Sacramento","CA"))
+tree.insert(wc,'end',text="Alaska",values=("Juneau","AK"))
+tree.insert(wc,'end',text="Hawaii",values=("Honolulu","HI"))
+
+tree.pack()
+
+root.mainloop()
